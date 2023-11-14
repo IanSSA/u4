@@ -27,11 +27,25 @@ function ver_vector(){
 
 function ordenar_vector(){
     let vector_ordenado = new Array();
-    let filtrados = vector_ordenado.filter(vector_ordenado =>  Number.isInteger(vector_ordenado));
+    vector_ordenado = vector;
+    let soloenteros = [];
+    for (var i = 0; i < vector_ordenado.length; i++) {
+        elemento = vector_ordenado[i];
+        alert(elemento);
+        if (isNaN(elemento)) { 
+            alert("fuera");
+        }else{
+            alert("dentro");
+            soloenteros.push(vector_ordenado[i]);
+        }; 
+    }
+    alert(soloenteros);
+    mostrar_vector(soloenteros);
+      }
+    let filtrados = vector_ordenado.filter(elemento_vector =>  Number.isInteger(elemento_vector));
     alert(filtrados);
     vector_ordenado = vector_ordenado.sort();
-    mostrar_vector(vector_ordenado);
-}
+
 
 function soloNumeros(array){
     var soloenteros = [];
