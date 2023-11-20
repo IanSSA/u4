@@ -28,7 +28,7 @@ function ver_vector(){
 function ordenar_vector(){
     let vector_ordenado = new Array();
     vector_ordenado = vector;
-    let soloenteros = [];
+    let soloenteros = new Array();
     for (var i = 0; i < vector_ordenado.length; i++) {
         elemento = vector_ordenado[i];
         alert(elemento);
@@ -39,13 +39,18 @@ function ordenar_vector(){
             soloenteros.push(vector_ordenado[i]);
         }; 
     }
-    alert(soloenteros);
-    mostrar_vector(soloenteros);
+    function ordenar(a, b) {
+        return a - b;
       }
-    let filtrados = vector_ordenado.filter(elemento_vector =>  Number.isInteger(elemento_vector));
-    alert(filtrados);
-    vector_ordenado = vector_ordenado.sort();
+    alert(soloenteros);
 
+    mostrar_vector(ordenar);
+    let 
+    solostring = vector_ordenado.sort();
+    for (var i = 0; i < vector_ordenado.length; i++) {
+
+    }
+      }
 
 function soloNumeros(array){
     var soloenteros = [];
